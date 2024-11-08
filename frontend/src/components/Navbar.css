@@ -1,0 +1,371 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-variation-settings: "wdth" 100;
+}
+
+.nav_container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 9vh;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid gray ;
+}
+
+.nav_elements_container {
+  display: flex;
+  height: 9vh;
+  width: 98%;
+  /* border: 2px solid rgb(227, 103, 21); */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_logo {
+  height: 7.5vh;
+  margin-left: 2vw  ;
+}
+
+.nav_links {
+  height: 9vh;
+  /* border: 2px solid rgb(12, 130, 234); */
+  display: flex;
+  align-items: center;
+  margin-left: 28vw;
+}
+
+.nav_ul {
+  display: flex;
+  gap: 5vw;
+  font-weight: 700;
+  font-size: 14.5px;
+  text-transform: uppercase;
+}
+
+.nav_ul .nav_li {
+  list-style-type: none;
+}
+
+.nav_li a {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+  padding-bottom: 5px; /* Space for the underline */
+  position: relative;
+}
+
+.nav_li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #53a661; /* Color of the underline */
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav_li a:hover::after {
+  width: 100%; /* Full underline on hover */
+}
+
+.nav_li a:hover {
+  color: #569e62f2;
+}
+
+.book_btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #3f864b;
+  height: 6.5vh;
+  width: 9vw;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+  color: #3f864b;
+  margin-right: 1vw;
+}
+
+
+.book_btn:hover {
+  color: white;
+  background-color: #3f864b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For devices with width 1024px or larger (Laptops) */
+@media (max-width: 1024px) {
+  .nav_elements_container {
+    width: 95%;
+  }
+
+  .nav_links {
+    margin-left: 20vw;
+  }
+
+  .nav_ul {
+    gap: 3vw;
+    font-size: 13px;
+  }
+
+  .book_btn {
+    width: 10vw;
+    height: 6vh;
+    font-size: 12px;
+  }
+}
+
+/* For tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+  .nav_container {
+    height: 10vh;
+  }
+
+  .nav_logo {
+    height: 6.5vh;
+    margin-left: 1vw;
+  }
+
+  .nav_links {
+    margin-left: 15vw;
+  }
+
+  .nav_ul {
+    gap: 4vw;
+    font-size: 12.5px;
+  }
+
+  .book_btn {
+    width: 11vw;
+    height: 6vh;
+    font-size: 11px;
+  }
+}
+
+/* For mobile devices (up to 767px) */
+@media (max-width: 767px) {
+  .nav_container {
+    height: 8vh;
+  }
+
+  .nav_elements_container {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .nav_logo {
+    height: 6vh;
+    margin: 0;
+  }
+
+  .nav_links {
+    margin-left: 0;
+    height: auto;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .nav_ul {
+    flex-direction: column;
+    gap: 20px;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 3vh;
+
+  }
+
+  .book_btn {
+    width: 80%;
+    height: 10vh;
+    font-size: 17px;
+    margin-top: 15px;
+  }
+}
+
+/* For very small devices (phones up to 480px) */
+@media (max-width: 480px) {
+  .nav_logo {
+    height: 5vh;
+  }
+
+  .nav_ul {
+    gap: 15px;
+    font-size: 12px;
+    margin-top: 3vh;
+  }
+
+  .book_btn {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hamburger styles */
+.hamburger {
+  display: none; /* Hide on large screens */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+.hamburger .open {
+  transform: rotate(45deg);
+}
+
+.hamburger .open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger .open:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Navbar Container */
+.nav_elements_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  margin-right: 5vw;
+}
+
+/* Keep the button size the same */
+
+
+/* Display hamburger on small screens */
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex; /* Show hamburger on small screens */
+    
+    
+  }
+  .book_btn{
+    display: none;
+  }
+
+
+  .nav_links {
+    display: none; /* Hide nav links initially on mobile */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 7vh; /* Adjust position as needed */
+    left: 35vw;
+    z-index: 999;
+    height: auto; /* Make height auto for mobile */
+  }
+
+  .nav_active {
+    display: flex; /* Show nav links when active */
+  }
+
+  /* Ensure button stays on the same line */
+  .nav_elements_container {
+    flex-direction: row; /* Keep elements in a row */
+    justify-content: space-between; /* Space out logo, menu, and button */
+    align-items: center; /* Center vertically */
+  }
+}
+
+/* For very small devices (phones up to 480px) */
+@media (max-width: 480px) {
+  .nav_links {
+    position: fixed;
+    top: 65px;
+    left: 32vw;
+    width: 100%;
+    height: 25vh;
+    padding: 20px 0px;
+    display: none; /* Default hidden */
+  }
+ 
+  .nav_active {
+    display: flex; /* Show when active */
+  }
+
+  .nav_ul {
+    flex-direction: column; /* Stack links vertically */
+    gap: 20px;
+    text-align: center; /* Center align text */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav_container {
+  position: fixed; /* Keep the navbar fixed at the top */
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}

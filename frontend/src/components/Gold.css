@@ -1,0 +1,146 @@
+.Gold_card {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    width: 25vw;
+    height: 75vh; /* Desired height */
+    background-color: #f9f0d3; /* Light gold background */
+    background-image: 
+      radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 215, 0, 0.3) 70%),
+      radial-gradient(circle at 100% 100%, rgba(255, 223, 186, 0.9) 20%, rgba(255, 255, 255, 0) 150%),
+      linear-gradient(135deg, rgba(255, 239, 140, 0.8) 0%, rgba(255, 230, 145, 1) 50%, rgba(255, 215, 0, 0.6) 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.Gold_card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25), 0 10px 30px rgba(255, 255, 255, 0.6);
+}
+
+.Gold_card::before {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 215, 0, 0.8) 75%
+    );
+    border-radius: 50%;
+    box-shadow: 0 2px 15px rgba(224, 224, 224, 0.7), 0 0 40px rgba(255, 215, 0, 0.9);
+}
+
+.Gold_card .title {
+    font-size: 2rem;
+    color: #8b6f39; /* Gold text color */
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.Gold_card .pricing {
+    font-size: 2.5rem;
+    color: #8b6f39;
+    font-weight: 700;
+}
+
+.Gold_card .pricing .pricing-time,
+.Gold_card .sub-title {
+    font-size: 1rem;
+    color: rgba(169, 149, 100, 0.85); /* Muted gold */
+    font-weight: 600;
+}
+
+.Gold_card .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #8b6f39;
+    font-weight: 600;
+    list-style: none;
+}
+
+.Gold_card .list .list-item .check {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+    color: rgba(255, 215, 0, 0.9); /* Shiny gold */
+    font-weight: 900;
+}
+
+.Gold_card .button {
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(255, 230, 145, 0.9); /* Coppery gold button */
+    font-size: 1rem;
+    color: #8b6f39;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.Gold_card .button .text-button {
+    position: relative;
+    z-index: 10;
+}
+
+.Gold_card .button::before,
+.Gold_card .button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.Gold_card .button::before {
+    left: 0;
+    background-image: radial-gradient(
+      circle at 0% 50%,
+      rgba(255, 255, 255, 1) 19%,
+      rgba(255, 255, 255, 0.5) 46%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.Gold_card .button::after {
+    right: 0;
+    background-image: radial-gradient(
+      circle at 100% 50%,
+      rgba(255, 255, 255, 1) 19%,
+      rgba(255, 255, 255, 0.5) 46%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.Gold_card .button:hover {
+    box-shadow: 0px 0px 25px rgba(255, 215, 0, 0.8), 0 0 35px rgba(192, 192, 192, 0.7);
+}
+
+.Gold_card .button:hover::before,
+.Gold_card .button:hover::after {
+    width: 0;
+    opacity: 0;
+}
+
+.diamond-image {
+    width: 15vw; 
+    height: 15vh; 
+    display: block;
+    margin: 0 auto 1rem;
+    mix-blend-mode: darken;
+}

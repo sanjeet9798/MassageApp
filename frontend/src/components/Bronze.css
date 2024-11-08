@@ -1,0 +1,149 @@
+.Bronze_card {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    width: 25vw;
+    height: 75vh; /* Changed height */
+    background-color: #f0e2c5; /* Light bronze background */
+    background-image: 
+      radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.8) 20%, rgba(194, 130, 64, 0.3) 70%), 
+      radial-gradient(circle at 100% 100%, rgba(180, 111, 47, 0.9) 20%, rgba(255, 255, 255, 0) 150%), 
+      linear-gradient(135deg, rgba(221, 164, 102, 0.8) 0%, rgba(235, 168, 108, 1) 50%, rgba(194, 130, 64, 0.6) 100%);
+    /* border-radius: 1rem; */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .Bronze_card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25), 0 10px 30px rgba(255, 255, 255, 0.6);
+  }
+  
+  .Bronze_card::before {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(214, 156, 78, 0.8) 75%
+    );
+    border-radius: 50%;
+    box-shadow: 0 2px 15px rgba(224, 180, 102, 0.7), 0 0 40px rgba(180, 111, 47, 0.9);
+  }
+  
+  .Bronze_card .title {
+    font-size: 2rem;
+    color: #5e3e23; /* Bronze text color */
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .Bronze_card .pricing {
+    font-size: 2.5rem;
+    color: #5e3e23;
+    font-weight: 700;
+  }
+  
+  .Bronze_card .pricing .pricing-time,
+  .Bronze_card .sub-title {
+    font-size: 1rem;
+    color: rgba(129, 79, 53, 0.85); /* Muted bronze */
+    font-weight: 600;
+  }
+  
+  .Bronze_card .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #5e3e23;
+    font-weight: 600;
+    list-style: none;
+  }
+  
+  .Bronze_card .list .list-item .check {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+    color: rgba(134, 88, 28, 0.9); /* Shiny bronze */
+    font-weight: 900;
+  }
+  
+  .Bronze_card .button {
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(235, 168, 108, 0.9); /* Coppery bronze button */
+    font-size: 1rem;
+    color: #5e3e23;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 15px rgba(169, 115, 85, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .Bronze_card .button .text-button {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .Bronze_card .button::before,
+  .Bronze_card .button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .Bronze_card .button::before {
+    left: 0;
+    background-image: radial-gradient(
+      circle at 0% 50%,
+      rgba(255, 255, 255, 1) 19%,
+      rgba(255, 255, 255, 0.5) 46%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  
+  .Bronze_card .button::after {
+    right: 0;
+    background-image: radial-gradient(
+      circle at 100% 50%,
+      rgba(255, 255, 255, 1) 19%,
+      rgba(255, 255, 255, 0.5) 46%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  
+  .Bronze_card .button:hover {
+    box-shadow: 0px 0px 25px rgba(169, 115, 85, 0.8), 0 0 35px rgba(192, 192, 192, 0.7);
+  }
+  
+  .Bronze_card .button:hover::before,
+  .Bronze_card .button:hover::after {
+    width: 0;
+    opacity: 0;
+  }
+  
+  .diamond-image {
+    width: 15vw; 
+    height: 15vh; 
+    display: block;
+    object-fit: contain;
+    margin: 0 auto 1rem;
+    mix-blend-mode: darken;
+  }
+  

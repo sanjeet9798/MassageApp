@@ -1,0 +1,147 @@
+/* Container for the entire section */
+.massage-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #f9f9f9;
+    width: 100%;
+  }
+  
+  /* Massage details section */
+  .massage3-details {
+    width: 50%;
+    padding-left: 3vw;
+  }
+  
+  .massage-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .massage-description {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+  }
+  
+  .time-options {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .time-options button {
+    padding: 0.8rem 2rem;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .time-options button.selected {
+    background-color: black;
+    color: white;
+  }
+  
+  .price-section {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .book-online .book-link {
+    color: green;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: 1px solid green;
+    padding-bottom: 0.2rem;
+    transition: border-bottom 0.3s ease;
+  }
+  
+  .book-online .book-link:hover {
+    border-bottom: 2px solid green;
+  }
+  
+  /* Massage image */
+  .massage-image {
+    width: 50%;
+  }
+  
+  .massage-image img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Responsive adjustments */
+  
+  /* Tablets */
+  @media (max-width: 1024px) {
+    .massage-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .massage3-details, .massage-image {
+      width: 100%;
+    }
+  
+    .massage-image img {
+      height: 300px;
+    }
+  
+    .massage-title {
+      font-size: 2rem;
+    }
+  
+    .price-section {
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* Phones */
+  @media (max-width: 768px) {
+    .massage-container {
+      padding: 1.5rem;
+    }
+  
+    .massage-title {
+      font-size: 1.8rem;
+    }
+  
+    .massage-description {
+      font-size: 1rem;
+    }
+  
+    .time-options button {
+      padding: 0.6rem 1.5rem;
+    }
+  
+    .price-section {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .massage-title {
+      font-size: 1.5rem;
+    }
+  
+    .time-options button {
+      padding: 0.4rem 1rem;
+      font-size: 0.9rem;
+    }
+  
+    .price-section {
+      font-size: 1.2rem;
+    }
+  
+    .book-online .book-link {
+      font-size: 1rem;
+    }
+  }
+  

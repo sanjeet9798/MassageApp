@@ -1,0 +1,389 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.about_section{
+    height: 100vh;
+    width: 100%;
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
+    
+}
+
+
+
+.about_head_sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+
+}
+.about_details{
+    height: 90vh;
+    width: 100%;
+    /* border: 2px solid rgb(255, 174, 0); */
+    display: flex;
+    align-items: center;
+}
+
+.about_owner_img{
+    height: 60vh;
+    width: 50%;
+    /* border: 2px solid red; */
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    padding-right: 1vw;
+
+}
+
+.about_owner_name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 10vh;
+}
+.image{
+    position: relative;
+    height: 50vh;
+    width: 75%;
+    /* border: 1px solid gray; */
+    background-size: cover;
+
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.about_owner_info{
+    display: flex;
+    height: 60vh;
+    width: 50%;
+    /* border: 2px solid rgb(0, 115, 255); */
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1vw;
+    font-weight: 400;
+
+}
+
+.information{
+    position: relative;
+    height: 50vh;
+    width: 75%;
+    /* border: 1px solid gray; */
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-between;
+    /* gap: 6vh; */
+    font-weight: 500;
+    line-height: 4vh;
+
+}
+
+.bullet_points{
+display: flex;
+flex-direction: column;
+gap: 20px;
+white-space: nowrap;
+color: green;
+
+}
+.bullet_points span{
+    color: black;
+    font-weight: 500;
+    font-size: medium;
+    white-space: nowrap;
+}
+
+
+
+
+
+/* Default for large screens (laptops, desktops, etc.) */
+.about_section {
+    height: 100vh;
+}
+
+.about_details {
+    display: flex;
+    flex-direction: row;
+}
+
+.about_owner_img, .about_owner_info {
+    width: 50%;
+}
+
+.image {
+    height: 50vh;
+    width: 75%;
+}
+
+.information {
+    width: 75%;
+    height: 50vh;
+}
+
+/* For large laptops (between 1024px and 1366px) */
+
+
+@media (max-width: 1366px) {
+    .about_section {
+        height: 100vh;
+    }
+
+    .about_details {
+        flex-direction: row;
+    }
+
+    .about_owner_img, .about_owner_info {
+        width: 50%;
+    }
+
+    .image {
+        height: 45vh;
+        width: 70%;
+    }
+    .bullet_points {
+        display: flex; /* Ensure flexbox is applied if needed */
+        gap: 15px;
+        position: relative;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+
+    .information {
+        width: 70%;
+        height: auto;
+    }
+    .book_btn {
+        width: 15vw;
+        height: 6vh;
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    .about_section {
+        height: auto;
+    }
+    .about_head_sec {
+        height: 40vh;
+    }
+
+    .about_details {
+        display: flex; /* Ensure flexbox is applied */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about_owner_img, .about_owner_info {
+        width: 100%;
+        padding: 0;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image {
+        height: 50vh;
+        width: 90%;
+    }
+
+    .information p {
+        position: relative;
+        margin-top: 4vh;
+        line-height: 30px;
+    }
+    
+    .bullet_points {
+        display: flex; /* Ensure flexbox is applied if needed */
+        gap: 15px;
+        position: relative;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+
+    .book_btn {
+        width: 15vw;
+        height: 6vh;
+        font-size: 15px;
+    }
+
+    .information {
+        width: 90%;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* For mobile phones (between 480px and 768px) */
+@media (max-width: 768px) {
+    .about_section {
+        height: auto;
+        /* background: #000; */
+    }
+
+    .about_head_sec {
+        height: 22vh;
+    }
+
+    .about_details {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about_owner_img, .about_owner_info {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about_owner_img{
+        position: relative;
+        margin-top: 10vh;
+    }
+
+    .image {
+        height: 45vh;
+        width: 90%;
+        object-fit: contain ;
+    }
+
+    .information {
+        width: 90%;
+        height: auto;
+        line-height: 3vh;
+    }
+    .information p {
+        position: relative;
+        margin-top: 5vh;
+        padding-left: 2vw;
+    }
+
+    .bullet_points {
+        gap: 15px;
+        position: relative;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        padding-left: 2vw
+
+    }
+
+    .bullet_points span {
+        font-size: small;
+    }
+
+    .book_btn {
+        position: relative;
+        width: 15vw;
+        height: 6vh;
+        font-size: 11px;
+    }
+}
+
+
+/* For small phones (below 480px) */
+@media (max-width: 480px) {
+    .about_section {
+        height: 100vh;
+    }
+
+    .about_head_sec {
+        display: flex;
+        height: 5vh;
+        position: relative;
+        top: -15vh;
+    }
+    
+
+    .about_owner_name{
+        display: flex;
+        position: relative;
+        font-size: small;
+        top: 15vh;
+     
+    }
+
+    .about_details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about_owner_img, .about_owner_info {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        bottom: 6vh;
+    }
+
+    .image {
+        height: 45vh;
+        width: 100%;
+    }
+    .image img{
+        object-fit: cover;
+    
+    }
+
+    .information {
+        width: 100%;
+        height: 25vh;
+        line-height: 2.5vh;
+    }
+    .information p  {
+        line-height: 3.2vh;
+        font-size: small;
+        margin-top: 2vh;
+        margin: 5px;
+        
+    }
+
+    .bullet_points {
+        gap: 10px;
+        margin-bottom: 7vh ,auto;
+    }
+
+    .bullet_points span {
+        font-size: small;
+    }
+}
